@@ -16762,7 +16762,7 @@ input::-ms-input-placeholder {
   border-radius: 8px;
 }
 .project-details__content .title {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 .project-details__content .text {
   color: #8f8c94;
@@ -18160,3 +18160,64 @@ Sidebar
 .map {
   height: 550px;
 }
+
+
+
+
+  .subheading {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(20px, 4vw, 42px);
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff;
+    animation: fadeUp 1s ease-out both;
+  }
+
+  .subheading span {
+    display: inline-block;
+    background: linear-gradient(
+      90deg, #6366f1, #a855f7, #ec4899, #6366f1
+    );
+    background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 4s linear infinite;
+  }
+  .business
+  {
+    display: flex;
+    align-items:inherit;
+    flex-direction: row;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  .business_image img
+  {
+    height: 100%;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes gradientMove {
+    to {
+      background-position: 300% center;
+    }
+  }
+
+  @media  (max-width: 768px) {
+
+    .business
+    {
+      flex-direction: column-reverse;
+    }
+  }
+  
