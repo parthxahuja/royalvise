@@ -7,26 +7,28 @@
 
 <style>
 
-/* ==============================
-   BUSINESS WEBSITE SECTION
-============================== */
 
-.business-website-section {
+
+/* =================================
+   WHAT WE DELIVER SECTION
+================================= */
+
+.deliver-section {
   position: relative;
   overflow: hidden;
-  padding: 100px 0;
+  padding: 100px 50px;
   background: #0b0b0e;
   color: #ffffff;
   isolation: isolate;
 }
 
-.business-website-section::before {
+.deliver-section::before {
   content: "";
   position: absolute;
-  width: 480px;
-  height: 480px;
-  top: -180px;
-  left: 18%;
+  top: -160px;
+  left: 12%;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   background: rgba(139, 92, 246, 0.12);
   filter: blur(110px);
@@ -34,268 +36,253 @@
   z-index: -1;
 }
 
-.business-website-section::after {
+.deliver-section::after {
   content: "";
   position: absolute;
-  width: 350px;
-  height: 350px;
-  right: -150px;
-  bottom: -100px;
+  right: -180px;
+  bottom: -150px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   background: rgba(236, 72, 153, 0.08);
-  filter: blur(100px);
+  filter: blur(110px);
   pointer-events: none;
   z-index: -1;
 }
 
-/* ==============================
-   SMALL SECTION TITLE
-============================== */
+/* SECTION HEADER */
 
-.business-content .title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #c4b5fd;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  animation: businessFadeUp 0.7s ease both;
+.deliver-header {
+  max-width: 800px;
+  margin-bottom: 50px;
+  animation: deliverFadeUp 0.8s ease both;
 }
 
-.title-dot {
-  display: inline-block;
-  width: 9px;
-  height: 9px;
-  flex-shrink: 0;
+.deliver-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #c4b5fd;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.label-dot {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: #a855f7;
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.8);
 }
 
-/* ==============================
-   MAIN HEADING
-============================== */
-
-.business-content .subheading {
-  max-width: 900px;
-  margin-bottom: 24px;
+.deliver-heading {
+  margin: 0 0 20px;
   color: #ffffff;
-  font-size: clamp(32px, 3.4vw, 52px);
+  font-size: clamp(32px, 4vw, 52px);
   font-weight: 750;
-  line-height: 1.18;
-  letter-spacing: -1.8px;
-  animation: businessFadeUp 0.85s ease both;
-  animation-delay: 0.1s;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
 }
 
-.business-content .subheading span {
-  display: inline;
+.deliver-heading span {
+  display: inline-block;
   background: linear-gradient(
     100deg,
-    #a855f7 0%,
-    #d946ef 45%,
-    #ec4899 100%
+    #a855f7,
+    #d946ef,
+    #ec4899
   );
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: businessGradient 5s ease infinite;
+  animation: deliverGradient 5s ease infinite;
 }
 
-/* ==============================
-   DESCRIPTION
-============================== */
-
-.business-content .text {
-  max-width: 780px;
+.deliver-intro {
+  max-width: 700px;
+  margin: 0;
   color: #a1a1aa;
-  font-size: 17px;
-  font-weight: 400;
+  font-size: 16px;
   line-height: 1.9;
-  animation: businessFadeUp 0.9s ease both;
-  animation-delay: 0.2s;
 }
 
-.business-content .secondary-text {
-  color: #85858f;
+/* SERVICES GRID */
+
+.deliver-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
 }
 
-/* ==============================
-   BUTTONS
-============================== */
+/* SERVICE CARD */
 
-.business-buttons {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 30px;
-  animation: businessFadeUp 1s ease both;
-  animation-delay: 0.3s;
-}
-
-.business-buttons .btn-style-one {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  min-height: 56px;
-  padding: 14px 22px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.business-buttons .primary-btn {
-  color: #ffffff;
-  background: linear-gradient(110deg, #7c3aed, #a855f7);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.18);
-}
-
-.business-buttons .primary-btn:hover {
-  color: #ffffff;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.35);
-}
-
-.business-buttons .secondary-btn {
-  color: #eeeeF4;
-  background: rgba(255, 255, 255, 0.035);
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.business-buttons .secondary-btn:hover {
-  color: #ffffff;
-  background: rgba(168, 85, 247, 0.12);
-  border-color: #a855f7;
-  transform: translateY(-4px);
-}
-
-.btn-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 21px;
-  transition: transform 0.3s ease;
-}
-
-.business-buttons a:hover .btn-icon {
-  transform: translateX(4px);
-}
-
-/* ==============================
-   IMAGE CARD
-============================== */
-
-.business-image-wrapper {
+.deliver-card {
   position: relative;
-  margin: 10px 0;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 18px;
-  background: #151519;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
-  isolation: isolate;
-  animation: businessImageReveal 1s ease both;
-  animation-delay: 0.2s;
-}
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 300px;
+  padding: 30px;
+  overflow: hidden;
 
-.business-image-wrapper .image-glow {
-  position: absolute;
-  inset: -2px;
-  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+
   background: linear-gradient(
-    135deg,
-    rgba(168, 85, 247, 0.4),
-    transparent 40%,
-    rgba(236, 72, 153, 0.2)
+    145deg,
+    rgba(255, 255, 255, 0.045),
+    rgba(255, 255, 255, 0.012)
   );
-  opacity: 0.45;
-  z-index: -1;
-  transition: opacity 0.4s ease;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+
+  animation: deliverFadeUp 0.7s ease both;
 }
 
-.business-image-wrapper:hover .image-glow {
+/* Staggered entrance */
+
+.deliver-card:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.deliver-card:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+.deliver-card:nth-child(4) {
+  animation-delay: 0.18s;
+}
+
+.deliver-card:nth-child(5) {
+  animation-delay: 0.24s;
+}
+
+.deliver-card:nth-child(6) {
+  animation-delay: 0.30s;
+}
+
+.deliver-card:nth-child(7) {
+  animation-delay: 0.36s;
+}
+
+.deliver-card:nth-child(8) {
+  animation-delay: 0.42s;
+}
+
+.deliver-card:nth-child(9) {
+  animation-delay: 0.48s;
+}
+
+/* Subtle gradient glow */
+
+.deliver-card::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.16);
+  filter: blur(45px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.deliver-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(168, 85, 247, 0.45);
+
+  background: linear-gradient(
+    145deg,
+    rgba(139, 92, 246, 0.09),
+    rgba(255, 255, 255, 0.02)
+  );
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
+}
+
+.deliver-card:hover::before {
   opacity: 1;
 }
 
-.business-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 17px;
-  transition:
-    transform 0.6s ease,
-    filter 0.4s ease;
-}
+/* ICON BOX */
 
-.business-image-wrapper:hover .business-image {
-  transform: scale(1.025);
-  filter: brightness(1.08);
-}
-
-/* Floating image caption */
-
-.image-caption {
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 14px;
+.deliver-icon {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 12px;
-  background: rgba(15, 15, 20, 0.82);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 14px;
+
+  background: rgba(139, 92, 246, 0.12);
+  color: #c084fc;
+
+  font-size: 23px;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-.caption-dot {
-  width: 9px;
-  height: 9px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: #a855f7;
-  box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
-}
-
-.image-caption strong,
-.image-caption small {
-  display: block;
-}
-
-.image-caption strong {
+.deliver-card:hover .deliver-icon {
+  transform: translateY(-3px) scale(1.06);
+  background: linear-gradient(135deg, #7c3aed, #c026d3);
   color: #ffffff;
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
+}
+
+/* CARD NUMBER */
+
+.deliver-number {
+  position: absolute;
+  top: 32px;
+  right: 30px;
+  color: rgba(255, 255, 255, 0.25);
   font-size: 13px;
   font-weight: 600;
-  line-height: 1.5;
+  letter-spacing: 1px;
 }
 
-.image-caption small {
-  margin-top: 3px;
+/* CARD TITLE */
+
+.deliver-card h3 {
+  margin: 0 0 14px;
+  color: #f9fafb;
+  font-size: 30px;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+/* CARD DESCRIPTION */
+
+.deliver-card p {
+  margin: 0;
   color: #a1a1aa;
-  font-size: 11px;
-  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.9;
 }
 
-/* ==============================
-   ANIMATIONS
-============================== */
+/* ANIMATIONS */
 
-@keyframes businessFadeUp {
+@keyframes deliverFadeUp {
   from {
     opacity: 0;
     transform: translateY(22px);
@@ -307,19 +294,7 @@
   }
 }
 
-@keyframes businessImageReveal {
-  from {
-    opacity: 0;
-    transform: translateX(25px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes businessGradient {
+@keyframes deliverGradient {
   0%, 100% {
     background-position: 0% center;
   }
@@ -329,89 +304,81 @@
   }
 }
 
-/* ==============================
-   TABLET
-============================== */
+/* TABLET */
 
 @media (max-width: 991px) {
-  .business-website-section {
+  .deliver-section {
     padding: 75px 0;
   }
 
-  .business-content .subheading {
-    max-width: 750px;
-    font-size: clamp(34px, 5vw, 46px);
-    letter-spacing: -1.2px;
+  .deliver-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
   }
 
-  .business-image-wrapper {
-    max-width: 520px;
-    margin: 10px auto 0;
+  .deliver-card {
+    min-height: 290px;
+    padding: 25px;
   }
 
-  .business-image {
-    aspect-ratio: 16 / 10;
+  .deliver-header {
+    margin-bottom: 38px;
   }
 }
 
-/* ==============================
-   MOBILE
-============================== */
+/* MOBILE */
 
 @media (max-width: 575px) {
-  .business-website-section {
+  .deliver-section {
     padding: 55px 0;
   }
 
-  .business-content .title {
-    font-size: 14px;
-  }
-
-  .business-content .subheading {
-    margin-bottom: 18px;
-    font-size: clamp(30px, 8vw, 38px);
-    line-height: 1.2;
+  .deliver-heading {
+    font-size: 33px;
     letter-spacing: -1px;
   }
 
-  .business-content .text {
+  .deliver-intro {
     font-size: 15px;
-    line-height: 1.8;
   }
 
-  .business-buttons {
-    align-items: stretch;
-    flex-direction: column;
-    gap: 12px;
+  .deliver-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
-  .business-buttons .btn-style-one {
-    width: 100%;
-    justify-content: space-between;
+  .deliver-card {
+    min-height: auto;
+    padding: 25px;
   }
 
-  .business-image {
-    aspect-ratio: 4 / 3;
+  .deliver-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    font-size: 21px;
   }
 
-  .image-caption {
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    padding: 12px;
+  .deliver-card h3 {
+    font-size: 18px;
   }
 }
 
-/* Accessibility: reduce motion when requested */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
-  .business-website-section *,
-  .business-website-section *::before,
-  .business-website-section *::after {
+  .deliver-section *,
+  .deliver-section *::before,
+  .deliver-section *::after {
     animation: none !important;
     transition: none !important;
   }
+
+  .deliver-card:hover {
+    transform: none;
+  }
 }
+
 
 
 </style>
@@ -419,76 +386,153 @@
 <body>
 
 
-<section class="business-website-section">
+
+<section class="deliver-section">
   <div class="container">
-    <div class="row align-items-center g-5">
 
-      <!-- Left Content -->
-      <div class="col-lg-8 col-md-12">
-        <div class="business-content">
+    <!-- Section Header -->
+    <div class="deliver-header">
+      <span class="deliver-label">
+        <span class="label-dot"></span>
+        WHAT WE DELIVER
+      </span>
 
-          <h5 class="title mb-3">
-            <span class="title-dot"></span>
-            Business Website Development
-          </h5>
+      <h2 class="deliver-heading">
+        Everything Your Business Website
+        <span>Needs.</span>
+      </h2>
 
-          <h2 class="subheading">
-            Your Business Deserves a Website That
-            <span>Works as Hard as You Do.</span>
-          </h2>
+      <p class="deliver-intro">
+        From strategy and design to launch and optimization, we provide
+        the essential tools your business needs to build a strong online presence.
+      </p>
+    </div>
 
-          <p class="text mb-4">
-            We design and develop professional business websites
-            that showcase your services, build customer trust, and
-            make it easier for potential clients to connect with you.
-          </p>
+    <!-- Services Grid -->
+    <div class="deliver-grid">
 
-          <p class="text mb-4 secondary-text">
-            From company websites to service-based business platforms,
-            we create responsive digital experiences tailored to your goals.
-          </p>
-
-          <div class="business-buttons">
-
-            <a href="about.html" class="btn-style-one primary-btn">
-              <span class="btn-title">Build Your Website</span>
-              <span class="btn-icon">&rarr;</span>
-            </a>
-
-            <a href="about.html" class="btn-style-one secondary-btn">
-              <span class="btn-title">Explore Our Work</span>
-              <span class="btn-icon">&nearr;</span>
-            </a>
-
-          </div>
+      <!-- 01 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-pen-ruler"></i>
         </div>
+        <span class="deliver-number">01</span>
+        <h3>Custom Website Design</h3>
+        <p>
+          Create a professional website reflecting your brand identity,
+          business goals, and audience expectations.
+        </p>
       </div>
 
-      <!-- Right Image -->
-      <div class="col-lg-4 col-md-12">
-        <div class="business-image-wrapper">
-          <div class="image-glow"></div>
-
-          <img
-            class="business-image"
-            src="images/resource/project2-1.jpg"
-            alt="Professional business website design project"
-            loading="lazy"
-          >
-
-          <div class="image-caption">
-            <span class="caption-dot"></span>
-            <div>
-              <strong>Modern Digital Experiences</strong>
-              <small>Designed for your business growth</small>
-            </div>
-          </div>
+      <!-- 02 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
+        <span class="deliver-number">02</span>
+        <h3>Responsive Development</h3>
+        <p>
+          Ensure your website works seamlessly across mobile phones,
+          tablets, laptops, and desktop screens.
+        </p>
+      </div>
+
+      <!-- 03 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <span class="deliver-number">03</span>
+        <h3>Business &amp; Service Pages</h3>
+        <p>
+          Present your company, services, expertise, and unique value
+          through clear, well-structured website pages.
+        </p>
+      </div>
+
+      <!-- 04 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+        <span class="deliver-number">04</span>
+        <h3>Contact &amp; Enquiry Forms</h3>
+        <p>
+          Help potential customers request information, enquire about
+          services, and connect with your business.
+        </p>
+      </div>
+
+      <!-- 05 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-file-pen"></i>
+        </div>
+        <span class="deliver-number">05</span>
+        <h3>Content Management</h3>
+        <p>
+          Update website text, images, services, and essential content
+          easily without rebuilding your entire website.
+        </p>
+      </div>
+
+      <!-- 06 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <span class="deliver-number">06</span>
+        <h3>Foundational SEO Setup</h3>
+        <p>
+          Improve search readiness with optimized titles, meta descriptions,
+          heading structures, clean URLs, and sitemaps.
+        </p>
+      </div>
+
+      <!-- 07 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <span class="deliver-number">07</span>
+        <h3>Performance Optimization</h3>
+        <p>
+          Improve loading speed through optimized images, efficient code,
+          and essential website performance checks.
+        </p>
+      </div>
+
+      <!-- 08 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="deliver-number">08</span>
+        <h3>Analytics Integration</h3>
+        <p>
+          Track website traffic and search performance using Google Analytics
+          and Google Search Console integrations.
+        </p>
+      </div>
+
+      <!-- 09 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <span class="deliver-number">09</span>
+        <h3>Security &amp; Launch Checks</h3>
+        <p>
+          Prepare your website for launch with HTTPS support, tested forms,
+          verified links, and responsive checks.
+        </p>
       </div>
 
     </div>
   </div>
 </section>
+
+
 
 
 </body>

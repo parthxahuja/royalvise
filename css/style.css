@@ -12526,7 +12526,8 @@ Section Title
   font-size: 16px;
   font-weight: 400;
   color: var(--theme-color1);
-  margin-bottom: 15px;
+  margin-bottom: 7px;
+  margin-top: 7px;
 }
 .blog-box .inner-box .content-box .title {
   text-transform: capitalize;
