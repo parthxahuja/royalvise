@@ -1,539 +1,299 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-
-
-/* =================================
-   WHAT WE DELIVER SECTION
-================================= */
-
-.deliver-section {
-  position: relative;
-  overflow: hidden;
-  padding: 100px 50px;
-  background: #0b0b0e;
-  color: #ffffff;
-  isolation: isolate;
-}
-
-.deliver-section::before {
-  content: "";
-  position: absolute;
-  top: -160px;
-  left: 12%;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: rgba(139, 92, 246, 0.12);
-  filter: blur(110px);
-  pointer-events: none;
-  z-index: -1;
-}
-
-.deliver-section::after {
-  content: "";
-  position: absolute;
-  right: -180px;
-  bottom: -150px;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  background: rgba(236, 72, 153, 0.08);
-  filter: blur(110px);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* SECTION HEADER */
-
-.deliver-header {
-  max-width: 800px;
-  margin-bottom: 50px;
-  animation: deliverFadeUp 0.8s ease both;
-}
-
-.deliver-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  color: #c4b5fd;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-.label-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #a855f7;
-  box-shadow: 0 0 14px rgba(168, 85, 247, 0.8);
-}
-
-.deliver-heading {
-  margin: 0 0 20px;
-  color: #ffffff;
-  font-size: clamp(32px, 4vw, 52px);
-  font-weight: 750;
-  line-height: 1.2;
-  letter-spacing: -1.5px;
-}
-
-.deliver-heading span {
-  display: inline-block;
-  background: linear-gradient(
-    100deg,
-    #a855f7,
-    #d946ef,
-    #ec4899
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: deliverGradient 5s ease infinite;
-}
-
-.deliver-intro {
-  max-width: 700px;
-  margin: 0;
-  color: #a1a1aa;
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-/* SERVICES GRID */
-
-.deliver-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-/* SERVICE CARD */
-
-.deliver-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  min-height: 300px;
-  padding: 30px;
-  overflow: hidden;
-
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 16px;
-
-  background: linear-gradient(
-    145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.012)
-  );
-
-  transition:
-    transform 0.35s ease,
-    border-color 0.35s ease,
-    background 0.35s ease,
-    box-shadow 0.35s ease;
-
-  animation: deliverFadeUp 0.7s ease both;
-}
-
-/* Staggered entrance */
-
-.deliver-card:nth-child(2) {
-  animation-delay: 0.06s;
-}
-
-.deliver-card:nth-child(3) {
-  animation-delay: 0.12s;
-}
-
-.deliver-card:nth-child(4) {
-  animation-delay: 0.18s;
-}
-
-.deliver-card:nth-child(5) {
-  animation-delay: 0.24s;
-}
-
-.deliver-card:nth-child(6) {
-  animation-delay: 0.30s;
-}
-
-.deliver-card:nth-child(7) {
-  animation-delay: 0.36s;
-}
-
-.deliver-card:nth-child(8) {
-  animation-delay: 0.42s;
-}
-
-.deliver-card:nth-child(9) {
-  animation-delay: 0.48s;
-}
-
-/* Subtle gradient glow */
-
-.deliver-card::before {
-  content: "";
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: rgba(168, 85, 247, 0.16);
-  filter: blur(45px);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
-
-.deliver-card:hover {
-  transform: translateY(-7px);
-  border-color: rgba(168, 85, 247, 0.45);
-
-  background: linear-gradient(
-    145deg,
-    rgba(139, 92, 246, 0.09),
-    rgba(255, 255, 255, 0.02)
-  );
-
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.22);
-}
-
-.deliver-card:hover::before {
-  opacity: 1;
-}
-
-/* ICON BOX */
-
-.deliver-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 58px;
-  height: 58px;
-  margin-bottom: 28px;
-
-  border: 1px solid rgba(168, 85, 247, 0.25);
-  border-radius: 14px;
-
-  background: rgba(139, 92, 246, 0.12);
-  color: #c084fc;
-
-  font-size: 23px;
-
-  transition:
-    transform 0.35s ease,
-    color 0.35s ease,
-    background 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.deliver-card:hover .deliver-icon {
-  transform: translateY(-3px) scale(1.06);
-  background: linear-gradient(135deg, #7c3aed, #c026d3);
-  color: #ffffff;
-  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.25);
-}
-
-/* CARD NUMBER */
-
-.deliver-number {
-  position: absolute;
-  top: 32px;
-  right: 30px;
-  color: rgba(255, 255, 255, 0.25);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-/* CARD TITLE */
-
-.deliver-card h3 {
-  margin: 0 0 14px;
-  color: #f9fafb;
-  font-size: 30px;
-  font-weight: 650;
-  line-height: 1.45;
-}
-
-/* CARD DESCRIPTION */
-
-.deliver-card p {
-  margin: 0;
-  color: #a1a1aa;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.9;
-}
-
-/* ANIMATIONS */
-
-@keyframes deliverFadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(22px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes deliverGradient {
-  0%, 100% {
-    background-position: 0% center;
-  }
-
-  50% {
-    background-position: 100% center;
-  }
-}
-
-/* TABLET */
-
-@media (max-width: 991px) {
-  .deliver-section {
-    padding: 75px 0;
-  }
-
-  .deliver-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .deliver-card {
-    min-height: 290px;
-    padding: 25px;
-  }
-
-  .deliver-header {
-    margin-bottom: 38px;
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 575px) {
-  .deliver-section {
-    padding: 55px 0;
-  }
-
-  .deliver-heading {
-    font-size: 33px;
-    letter-spacing: -1px;
-  }
-
-  .deliver-intro {
-    font-size: 15px;
-  }
-
-  .deliver-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .deliver-card {
-    min-height: auto;
-    padding: 25px;
-  }
-
-  .deliver-icon {
-    width: 52px;
-    height: 52px;
-    margin-bottom: 22px;
-    font-size: 21px;
-  }
-
-  .deliver-card h3 {
-    font-size: 18px;
-  }
-}
-
-/* ACCESSIBILITY */
-
-@media (prefers-reduced-motion: reduce) {
-  .deliver-section *,
-  .deliver-section *::before,
-  .deliver-section *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .deliver-card:hover {
-    transform: none;
-  }
-}
-
-
-
-</style>
-</head>
-<body>
-
-
-
-<section class="deliver-section">
-  <div class="container">
-
-    <!-- Section Header -->
-    <div class="deliver-header">
-      <span class="deliver-label">
-        <span class="label-dot"></span>
-        WHAT WE DELIVER
-      </span>
-
-      <h2 class="deliver-heading">
-        Everything Your Business Website
-        <span>Needs.</span>
-      </h2>
-
-      <p class="deliver-intro">
-        From strategy and design to launch and optimization, we provide
-        the essential tools your business needs to build a strong online presence.
+<section class="uiux-deliver-section">
+  <div class="uiux-container">
+
+    <!-- Section Heading -->
+    <div class="uiux-header">
+      <span class="uiux-label">WHAT WE DELIVER</span>
+      <h2>Every Design Decision Has a Purpose.</h2>
+      <p>
+        We create thoughtful digital experiences that make every interaction
+        clearer, smoother, and more meaningful.
       </p>
     </div>
 
-    <!-- Services Grid -->
-    <div class="deliver-grid">
+    <!-- Service Cards -->
+    <div class="uiux-grid">
 
-      <!-- 01 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-pen-ruler"></i>
-        </div>
-        <span class="deliver-number">01</span>
-        <h3>Custom Website Design</h3>
-        <p>
-          Create a professional website reflecting your brand identity,
-          business goals, and audience expectations.
-        </p>
-      </div>
-
-      <!-- 02 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-mobile-screen-button"></i>
-        </div>
-        <span class="deliver-number">02</span>
-        <h3>Responsive Development</h3>
-        <p>
-          Ensure your website works seamlessly across mobile phones,
-          tablets, laptops, and desktop screens.
-        </p>
-      </div>
-
-      <!-- 03 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-layer-group"></i>
-        </div>
-        <span class="deliver-number">03</span>
-        <h3>Business &amp; Service Pages</h3>
-        <p>
-          Present your company, services, expertise, and unique value
-          through clear, well-structured website pages.
-        </p>
-      </div>
-
-      <!-- 04 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-envelope-open-text"></i>
-        </div>
-        <span class="deliver-number">04</span>
-        <h3>Contact &amp; Enquiry Forms</h3>
-        <p>
-          Help potential customers request information, enquire about
-          services, and connect with your business.
-        </p>
-      </div>
-
-      <!-- 05 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-file-pen"></i>
-        </div>
-        <span class="deliver-number">05</span>
-        <h3>Content Management</h3>
-        <p>
-          Update website text, images, services, and essential content
-          easily without rebuilding your entire website.
-        </p>
-      </div>
-
-      <!-- 06 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
+      <div class="uiux-card">
+        <div class="uiux-icon">
           <i class="fa-solid fa-magnifying-glass-chart"></i>
         </div>
-        <span class="deliver-number">06</span>
-        <h3>Foundational SEO Setup</h3>
-        <p>
-          Improve search readiness with optimized titles, meta descriptions,
-          heading structures, clean URLs, and sitemaps.
-        </p>
+        <h3>User Research &amp; Analysis</h3>
+        <p>Understand user needs, audience expectations, and interaction patterns through relevant research.</p>
       </div>
 
-      <!-- 07 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-gauge-high"></i>
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-sitemap"></i>
         </div>
-        <span class="deliver-number">07</span>
-        <h3>Performance Optimization</h3>
-        <p>
-          Improve loading speed through optimized images, efficient code,
-          and essential website performance checks.
-        </p>
+        <h3>Information Architecture</h3>
+        <p>Organize pages, features, and content into clear and logical structures.</p>
       </div>
 
-      <!-- 08 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-chart-line"></i>
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-layer-group"></i>
         </div>
-        <span class="deliver-number">08</span>
-        <h3>Analytics Integration</h3>
-        <p>
-          Track website traffic and search performance using Google Analytics
-          and Google Search Console integrations.
-        </p>
+        <h3>Wireframe Design</h3>
+        <p>Create simplified layouts that define page structure, content placement, and functionality.</p>
       </div>
 
-      <!-- 09 -->
-      <div class="deliver-card">
-        <div class="deliver-icon">
-          <i class="fa-solid fa-shield-halved"></i>
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-pen-ruler"></i>
         </div>
-        <span class="deliver-number">09</span>
-        <h3>Security &amp; Launch Checks</h3>
-        <p>
-          Prepare your website for launch with HTTPS support, tested forms,
-          verified links, and responsive checks.
-        </p>
+        <h3>Website UI Design</h3>
+        <p>Design visually consistent website interfaces aligned with your brand identity and requirements.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <h3>Mobile App UI Design</h3>
+        <p>Create intuitive mobile interfaces with layouts suited to different screen sizes.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-hand-pointer"></i>
+        </div>
+        <h3>Interactive Prototyping</h3>
+        <p>Build clickable prototypes to demonstrate navigation, interactions, and user journeys.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-palette"></i>
+        </div>
+        <h3>Design Systems</h3>
+        <p>Establish reusable components, typography, colors, spacing, and interface guidelines.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-tablet-screen-button"></i>
+        </div>
+        <h3>Responsive Interface Design</h3>
+        <p>Prepare layouts for mobile, tablet, laptop, and desktop experiences.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <h3>Usability Improvements</h3>
+        <p>Identify interface issues and refine navigation, readability, and interaction patterns.</p>
+      </div>
+
+      <div class="uiux-card">
+        <div class="uiux-icon">
+          <i class="fa-solid fa-file-export"></i>
+        </div>
+        <h3>Developer Handoff</h3>
+        <p>Provide organized design files, component specifications, and relevant implementation guidelines.</p>
       </div>
 
     </div>
   </div>
 </section>
 
+<style>
+/* UI/UX Deliver Section */
+.uiux-deliver-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 20px;
+  background: #0b0b0e;
+  isolation: isolate;
+}
 
+.uiux-deliver-section::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: 10%;
+  left: -220px;
+  background: rgba(130, 65, 255, 0.13);
+  filter: blur(130px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
 
+.uiux-deliver-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: 0;
+  right: -200px;
+  background: rgba(210, 65, 255, 0.10);
+  filter: blur(130px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: -1;
+}
 
-</body>
-</html>
+.uiux-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.uiux-header {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.uiux-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #b78aff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.uiux-header h2 {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.uiux-header p {
+  margin: 0;
+  color: #a4a4ad;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Grid */
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* Cards */
+.uiux-card {
+  position: relative;
+  padding: 32px 28px;
+  min-height: 225px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.055),
+    rgba(255, 255, 255, 0.018)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  transition: transform 0.35s ease, border-color 0.35s ease,
+              background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.uiux-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(174, 115, 255, 0.55);
+  background: linear-gradient(
+    145deg,
+    rgba(130, 65, 255, 0.13),
+    rgba(255, 255, 255, 0.035)
+  );
+  box-shadow: 0 15px 40px rgba(111, 55, 220, 0.12);
+}
+
+/* Icons */
+.uiux-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 24px;
+  color: #c39aff;
+  font-size: 21px;
+  background: rgba(151, 93, 255, 0.13);
+  border: 1px solid rgba(174, 115, 255, 0.22);
+  border-radius: 13px;
+  transition: all 0.35s ease;
+}
+
+.uiux-card:hover .uiux-icon {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8547f5, #c04dff);
+  border-color: transparent;
+  box-shadow: 0 6px 22px rgba(147, 75, 255, 0.3);
+}
+
+/* Card Content */
+.uiux-card h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.uiux-card p {
+  margin: 0;
+  color: #a4a4ad;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .uiux-deliver-section {
+    padding: 80px 20px;
+  }
+
+  .uiux-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .uiux-card {
+    padding: 28px 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .uiux-deliver-section {
+    padding: 65px 16px;
+  }
+
+  .uiux-header {
+    margin-bottom: 38px;
+  }
+
+  .uiux-header h2 {
+    font-size: 30px;
+    letter-spacing: -0.8px;
+  }
+
+  .uiux-header p {
+    font-size: 14px;
+  }
+
+  .uiux-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .uiux-card {
+    min-height: auto;
+    padding: 25px 22px;
+  }
+
+  .uiux-card h3 {
+    font-size: 17px;
+  }
+}
+</style>

@@ -8,7 +8,7 @@
 <!-- Stylesheets -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
 <!-- Responsive -->
@@ -37,9 +37,9 @@
     <!-- Preloader end -->
 
     <!-- Back To Top Start -->
-    <button id="back-top" class="back-to-top">
-        <i class="fa-regular fa-arrow-up"></i>
-    </button>
+    <button id="back-top" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
 
     <!-- MouseCursor Start -->
     <div class="mouseCursor cursor-outer"></div>
@@ -59,7 +59,7 @@
           <div class="nav-outer">
              <nav class="nav main-menu">
               <ul class="navigation">
-                <li class="current dropdown">
+                <li class=" dropdown">
                   <a href="index.html">Home</a>
                   <!--<ul>
                     <li class="dropdown"><a href="#">Digtal Agency</a>
@@ -98,17 +98,17 @@
                 <li>
                   <a href="about.html">About</a>
                 </li>
-                <li class="dropdown">
+                <li class="current dropdown">
                   <a href="#">Services</a>
                   <ul>
 
                     <li class="dropdown"><a href="#">Web Design</a>
                       <ul>
-                        <li><a href="page-projects.html">Business Websites</a></li>
-                        <li><a href="page-project-details.html">Landing Pages</a></li>
-                        <li><a href="page-project-details.html">E-commerce Websites</a></li>
-                        <li><a href="page-project-details.html">UI/UX Design</a></li>
-                        <li><a href="page-project-details.html">Website Redesign & Maintenance</a></li>
+                        <li><a href="business-websites.html">Business Websites</a></li>
+                        <li><a href="landing-pages.html">Landing Pages</a></li>
+                        <li><a href="ecommerce-websites.html">E-commerce Websites</a></li>
+                        <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="website-redesign-and-Maintenance.html">Website Redesign & Maintenance</a></li>
                       </ul>
                     </li>
                     <li class="dropdown"><a href="#">Digital Media</a>
@@ -166,8 +166,8 @@
               <!-- Main Menu End-->
               <div class="ui-btn-outer">
                 <div class="ui-btn-search">
-                  <button class="ui-btn ui-btn search-btn main-header__search search-toggler">
-                  <i class="fa-regular fa-magnifying-glass"></i>
+                  <button class="ui-btn ui-btn search-btn main-header__search search-toggler" type="button" aria-label="Open search">
+                  <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                   </button>
                   <a href="page-contact.html" class="contact-btn">
                     Let’s Talk
@@ -300,18 +300,18 @@
     	<section class="page-title" style="background-image: url(images/background/page-title.jpg);">
     		<div class="auto-container">
     			<div class="title-outer text-center">
-    				<h1 class="title">Business Website</h1>
+    				<h1 class="title">Landing Pages</h1>
     				<ul class="page-breadcrumb">
     					<li><a href="index-2.html">Services</a></li>
     					<li><a href="index-2.html">Web Design</a></li>
-    					<li>Business Website</li>
+    					<li>Landing Pages</li>
     				</ul>
     			</div>
     		</div>
     	</section>
 
       <!--Project Details-->
-      <section class="project-details pt-120 pb-120">
+      <section class="project-details pt-120">
         <div class="container">
           <div class="project-details__top">
             <div class="project-details__img fix"> <img data-speed=".8" src="images/resource/project-details.jpg" alt=""> </div>
@@ -339,10 +339,10 @@
           <div class="project-details__content">
            <div class="col-lg-12 business">
             <div class="col-lg-7">
-               <h5 class="title mb-3">Business Website Development</h5>
-            <h2 class="subheading mb-3">Your Business Deserves a Website That <span>Works as Hard as You Do.</span></h2>
-            <p class="text mb-3">We design and develop professional business websites that showcase your services, build customer trust, and make it easier for potential clients to connect with you.</p>
-            <p class="text mb-3">From company websites to service-based business platforms, we create responsive digital experiences tailored to your goals.</p>
+               <h5 class="title mb-3">Landing Page Design & Development</h5>
+            <h2 class="subheading mb-3">Landing Pages Built to <span>Turn Clicks Into Customers.</span></h2>
+            <p class="text mb-3">We design and develop focused landing pages that communicate your offer, capture attention, and guide visitors toward a clear action</p>
+            <p class="text mb-3">Whether you're launching a product, promoting a service, collecting leads, or running an advertising campaign, we create landing pages tailored to your specific goal.</p>
             <a href="about.html" class="btn-style-one wow fadeInUp" data-wow-delay=".8s">
                             <span class="btn-arrow-left"> <img src="images/icons/right-arrow-1-2.png" alt=""> </span>
                             <span class="btn-title">Build Your Website</span>
@@ -350,12 +350,13 @@
                           </a> &nbsp;
                           <a href="about.html" class="btn-style-one bg-dark wow fadeInUp" data-wow-delay=".8s">
                             <span class="btn-arrow-left"> <img src="images/icons/right-arrow-1-2.png" alt=""> </span>
-                            <span class="btn-title">Explore Our Work</span>
+                            <span class="btn-title">Explore Our Services</span>
                             <span class="btn-arrow-right"> <img src="images/icons/right-arrow-1-2.png" alt=""> </span>
                           </a>
             </div>
             <div class="col-lg-5 business_image"><img class="w-100" src="images/resource/project2-1.jpg" alt=""></div>
            </div>
+          </div>
             <div class="swiper project-image-slider mb-5">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -375,15 +376,153 @@
                 </div>
               </div>
             </div>
-             <h5 class="title mb-3">A STRONGER DIGITAL PRESENCE</h5>
-            <h2 class="subheading mb-3">Turn Your Business Into a <span><u>Professional Online Experience.</u></span></h2>
-            <p class="text">Your website is more than an online address. It's where potential customers learn about your business, explore your services, evaluate your credibility, and decide whether to work with you. At Royalvise, we create business websites that combine purposeful design, clear communication, and reliable functionality. Every page is structured to help visitors find the information they need and take the next step with confidence.Whether you're launching a new company or upgrading an existing website, we build around your business requirements, audience, and brand identity.</p>
+             <h5 class="title mb-3">PURPOSE-DRIVEN WEB DESIGN</h5>
+            <h2 class="subheading mb-3">One Page. One Clear Goal. <span><u>A Better User Journey.</u></span></h2>
+            <p class="text">A landing page is designed around a specific objective, giving visitors the information they need without unnecessary distractions.At Royalvise, we combine strategic page structure, persuasive content, responsive design, and clear calls to action to create landing pages that support your marketing goals.From simple enquiry pages to detailed product launch pages, every design is planned around your offer, target audience, and desired outcome.</p>
+            </div>
+
+            <!--what we deliver-->
+            <section class="deliver-section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="deliver-header">
+      <span class="deliver-label">
+        <span class="label-dot"></span>
+        WHAT WE DELIVER
+      </span>
+
+      <h2 class="deliver-heading">
+        Every Element Has a
+        <span>Purpose.</span>
+      </h2>
+
+      <p class="deliver-intro">
+       We create strategic landing pages that communicate your offer,
+        engage your audience, and guide visitors toward meaningful action.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="deliver-grid">
+
+      <!-- 01 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-pen-ruler"></i>
+        </div>
+        <span class="deliver-number">01</span>
+        <h3>Custom Landing Page Design</h3>
+        <p>
+          Layouts tailored to your campaign, audience, offer, and brand identity.
+        </p>
+      </div>
+
+      <!-- 02 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <span class="deliver-number">02</span>
+        <h3>Conversion-Focused Structure</h3>
+        <p>
+          Logical content sections that guide visitors from the headline to the desired action.
+        </p>
+      </div>
+
+      <!-- 03 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+         <i class="fa-solid fa-pen-to-square"></i>
+        </div>
+        <span class="deliver-number">03</span>
+         <h3>Compelling Copy &amp; Headlines</h3>
+        <p>
+          Clear messaging that explains your offer, highlights benefits, and addresses customer concerns.
+        </p>
+      </div>
+
+      <!-- 04 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-hand-pointer"></i>
+        </div>
+        <span class="deliver-number">04</span>
+        <h3>Call-to-Action Design</h3>
+        <p>
+          Strategically placed buttons that encourage enquiries, registrations, purchases, or bookings.
+        </p>
+      </div>
+
+      <!-- 05 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-rectangle-list"></i>
+        </div>
+        <span class="deliver-number">05</span>
+        <h3>Lead Capture Forms</h3>
+        <p>
+          Forms designed to collect relevant information from prospective customers.
+        </p>
+      </div>
+
+      <!-- 06 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+        <span class="deliver-number">06</span>
+        <h3>Responsive Development</h3>
+        <p>
+          Layouts optimized for mobile phones, tablets, laptops, and desktop screens.
+        </p>
+      </div>
+
+      <!-- 07 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <span class="deliver-number">07</span>
+        <h3>Performance Optimization</h3>
+        <p>
+          Optimized images, efficient code, and technical checks to support fast loading.
+        </p>
+      </div>
+
+      <!-- 08 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <span class="deliver-number">08</span>
+        <h3>Analytics &amp; Tracking Setup</h3>
+        <p>
+          Integration with suitable analytics and advertising tools to measure visits and conversions, where included.
+        </p>
+      </div>
+
+      <!-- 09 -->
+      <div class="deliver-card">
+        <div class="deliver-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <span class="deliver-number">09</span>
+        <h3>SEO &amp; Technical Setup</h3>
+        <p>
+          Relevant metadata, heading structure, indexability settings, and clean URLs where appropriate for the campaign.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <!-- Blog Section -->
       <section class="blog-section pt50 pb-120">
         <div class="auto-container">
-          <h6 class="text text-center mt-5">WHAT WE DELIVER</h6>
-          <h3 class="title mb-3 text-center">Everything Your Business Website Needs.</h3>
+          <h6 class="text text-center mt-5">LANDING PAGE SOLUTIONS</h6>
+          <h3 class="title mb-3 text-center">A Landing Page for Every Campaign Goal.</h3>
           <div class="row">
             <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".1s">
               <div class="blog-box">
@@ -394,8 +533,8 @@
                     <div class="num">20</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Custom Website Design</h4>
-                    <p class="post-text">Create a professional website reflecting your brand identity, business goals, and audience expectations.</p>
+                    <h4 class="title">Lead Generation Landing Pages</h4>
+                    <p class="post-text">Capture enquiries from potential customers interested in your services or solutions.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -415,8 +554,8 @@
                     <div class="num">05</div>
                   </div>
                    <div class="content-box">
-                    <h4 class="title">Responsive Development</h4>
-                    <p class="post-text">Ensure your website works seamlessly across mobile phones, tablets, laptops, and desktop screens.</p>
+                    <h4 class="title">Product Launch Landing Pages</h4>
+                    <p class="post-text">Introduce new products, highlight key features, and encourage early interest or purchases.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -436,8 +575,8 @@
                     <div class="num">08</div>
                   </div>
                    <div class="content-box">
-                    <h4 class="title">Business & Service Pages</h4>
-                    <p class="post-text">Present your company, services, expertise, and unique value through clear, well-structured website pages.</p>
+                    <h4 class="title">Service Landing Pages</h4>
+                    <p class="post-text">Present a specific service, explain its benefits, answer objections, and generate enquiries.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -457,8 +596,8 @@
                     <div class="num">05</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Contact & Enquiry Forms</h4>
-                    <p class="post-text">Help potential customers request information, enquire about services, and connect with your business.</p>
+                    <h4 class="title">Paid Advertising Landing Pages</h4>
+                    <p class="post-text">Create campaign-specific experiences aligned with the messaging and audience of your advertisements.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -478,8 +617,8 @@
                     <div class="num">08</div>
                   </div>
                    <div class="content-box">
-                    <h4 class="title">Content Management</h4>
-                    <p class="post-text">Update website text, images, services, and essential content easily without rebuilding your entire website.</p>
+                    <h4 class="title">Event Registration Pages</h4>
+                    <p class="post-text">Share event details, schedules, speakers, and registration forms in one focused experience</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -499,8 +638,8 @@
                     <div class="num">20</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Foundational SEO Setup</h4>
-                    <p class="post-text">Improve search readiness with optimized titles, meta descriptions, heading structures, clean URLs, and sitemaps.</p>
+                    <h4 class="title">Offer & Promotion Landing Pages</h4>
+                    <p class="post-text">Highlight discounts, limited-time offers, seasonal campaigns, or special business promotions.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -520,8 +659,8 @@
                     <div class="num">20</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Performance Optimization</h4>
-                    <p class="post-text">Improve loading speed through optimized images, efficient code, and essential website performance checks.</p>
+                    <h4 class="title">App & Software Landing Pages</h4>
+                    <p class="post-text">Explain product functionality, showcase benefits, and encourage downloads, demos, or sign-ups.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -541,8 +680,8 @@
                     <div class="num">20</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Analytics Integration</h4>
-                    <p class="post-text">Track website traffic and search performance using Google Analytics and Google Search Console integrations.</p>
+                    <h4 class="title">Coming Soon & Waitlist Pages</h4>
+                    <p class="post-text">Build early awareness and collect registrations before a product, service, or website launches.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -562,8 +701,8 @@
                     <div class="num">20</div>
                   </div>
                   <div class="content-box">
-                    <h4 class="title">Security & Launch Checks</h4>
-                    <p class="post-text">Prepare your website for launch with HTTPS support, tested forms, verified links, and responsive checks.</p>
+                    <h4 class="title">Booking & Consultation Pages</h4>
+                    <p class="post-text">Present your offering and help visitors request appointments, consultations, or demonstrations.</p>
                     <a href="news-details.html" class="arrow-link">
                      Enquire Now
                       <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -580,144 +719,215 @@
       <!--End Blog Section -->
 
 
-            <div class="row mt-3">
-              <div class="col-lg-5">
-                <h2 class="project-title-big-title">Interesting Facts In Development</h2>
-              </div>
-              <div class="col-lg-7">
-                <p class="text mb-3">Must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter</p>
-                <div class="feature-list mt-4">
-                  <ul>
-                    <li><i class="icon fa-solid fa-circle-check"></i> Efficient Sprint Planning</li>
-                    <li><i class="icon fa-solid fa-circle-check"></i> Efficient Sprint Planning</li>
-                  </ul>
-                  <ul>
-                    <li><i class="icon fa-solid fa-circle-check"></i> Iterative Delivery Approach</li>
-                    <li><i class="icon fa-solid fa-circle-check"></i> Problem-solving</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--Project Details End-->
+           
+<!-- ROYALVISE PROJECT CTA SECTION -->
+<section class="project-cta">
+  <div class="project-cta-glow project-cta-glow-one"></div>
+  <div class="project-cta-glow project-cta-glow-two"></div>
 
-    	<!-- Main Footer -->
-      <footer class="footer-section">
-        <div class="shape-1 tm-gsap-animate-circle">
-          <img src="images/icons/footer-shape-1-1.png" alt="img">
-        </div>
-        <div class="foorer-area section-padding pb-0">
-          <div class="footer-line">
-            <img src="images/icons/footer-line1-1.png" alt="">
-          </div>
-          <div class="container">
-            <div class="footer-top-wrapper wow fadeInUp" data-wow-delay=".2s">
-              <a href="index-2.html" class="footer-logo">
-                <img src="images/logo/white-logo.png" alt="">
-              </a>
-              <div class="footer-info">
-                <a class="mail" href="https://html.kodesolution.com/cdn-cgi/l/email-protection#eb858e8e8f838e879bab8884869b8a8592c5888486"><span class="__cf_email__" data-cfemail="59373c3c3d313c3529193a363429383720773a3634">[email&#160;protected]</span></a>
-                <a class="phone" href="tel:+12345678900">(+123) 456789 00</a>
-              </div>
-            </div>
-            <div class="footer-widget-wrapper">
-              <div class="row justify-content-between">
-                <div class="col-xl-5 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                  <div class="footer-content">
-                    <h2 class="title">Let’s Talk<span class="d-xl-block">Work Together</span></h2>
-                    <h3 class="title-2">Get the latest inspiration & insights</h3>
-                    <form method="post" action="#">
-                      <div class="form-group">
-                        <input type="email" name="email" class="email" placeholder="Enter your email" required="">
-                        <button type="button" class="circle-btn">
-                          <i class="fa-light fa-paper-plane"></i>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-xl-2 d-none d-xl-block">
-                </div>
-                <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
-                  <div class="footer-widget-items mt-40">
-                    <div class="widget-head mb-20">
-                      <h4 class="widget-title">Quick Link</h4>
-                    </div>
-                    <ul class="user-links">
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="page-team.html">Our Team</a></li>
-                      <li><a href="page-projects.html">Our <br> Portfolio</a></li>
-                      <li><a href="page-contact.html">Careers</a></li>
-                      <li><a href="page-contact.html">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".7s">
-                  <div class="footer-widget-items  mt-40">
-                    <div class="widget-head mb-20">
-                      <h4 class="widget-title">Our Solutions</h4>
-                    </div>
-                    <ul class="user-links">
-                      <li><a href="page-service-details.html">Web Development</a></li>
-                      <li><a href="page-service-details.html">UI/UX Design </a></li>
-                      <li><a href="page-service-details.html">Mobile Application</a></li>
-                      <li><a href="page-service-details.html">Cloud Service</a></li>
-                      <li><a href="page-service-details.html">Web Development</a></li>
-                      <li><a href="page-service-details.html">Cyber Security </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer-bottom">
-              <div class="footer-bottom-wrapper wow fadeInUp" data-wow-delay=".3s">
-                <p>© Copyright 2026 by Company.com</p>
-                <div class="social-icon">
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                  <a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
-                  <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!--End Main Footer -->
+  <div class="project-cta-container">
+
+    <div class="project-cta-content">
+
+      <span class="project-cta-label">
+        <span class="project-cta-dot"></span>
+        HAVE A CAMPAIGN IN MIND?
+      </span>
+
+      <h2 class="project-cta-heading">
+       Let's Build a Landing Page
+        <span>Around Your Goal.</span>
+      </h2>
+
+      <p class="project-cta-description">
+        Tell us what you're promoting, who you want to reach, and what action you want visitors to take. We'll help you plan a landing page that fits your campaign requirements.
+      </p>
+
+      <div class="project-cta-actions">
+        <a
+          href="mailto:hello@royalvise.com?subject=Discuss%20Your%20Project"
+          class="project-cta-btn project-cta-btn-primary"
+        >
+          Discuss Your Project
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a
+          href="/contact"
+          class="project-cta-btn project-cta-btn-secondary"
+        >
+          Contact Royalvise
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div class="project-cta-email">
+        <span class="project-cta-email-icon">
+          <i class="fa-regular fa-envelope"></i>
+        </span>
+
+        <span class="project-cta-email-text">
+          Prefer email? Write to us at
+          <a href="mailto:hello@royalvise.com">
+            hello@royalvise.com
+          </a>
+        </span>
+      </div>
+
     </div>
+
+    <div class="project-cta-visual" aria-hidden="true">
+      <div class="project-cta-orbit project-cta-orbit-one"></div>
+      <div class="project-cta-orbit project-cta-orbit-two"></div>
+
+      <div class="project-cta-symbol">
+        <span class="project-cta-symbol-r">R</span>
+        <span class="project-cta-symbol-dot"></span>
+      </div>
+
+      <div class="project-cta-floating project-cta-float-top">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>Ideas into action</span>
+      </div>
+
+      <div class="project-cta-floating project-cta-float-bottom">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <span>Built for growth</span>
+      </div>
+    </div>
+
   </div>
+</section>
+      <!--Project Details End-->
+      
 
-</div><!-- End Page Wrapper -->
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/gsap.js"></script>
-<script src="js/three.js"></script>
-<script src="js/hover-effect.umd.js"></script>
-<script src="js/gsap-scroll-to-plugin.js"></script>
-<script src="js/gsap-scroll-smoother.js"></script>
-<script src="js/gsap-scroll-trigger.js"></script>
-<script src="js/gsap-split-text.js"></script>
-<script src="js/split-type.min.js"></script>
-<script src="js/parallaxie.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/bxslider.js"></script>
-<script src="js/nice-select.min.js"></script>
-<script src="js/knob.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/script.js"></script>
-<script src="js/script-gsap.js"></script>
+  <!-- Footer Section Section -->
+        <footer class="footer-section">
+          <div class="shape-1 tm-gsap-animate-circle">
+            <img src="images/icons/footer-shape-1-1.png" alt="img">
+          </div>
+          <div class="foorer-area section-padding pb-0">
+            <div class="footer-line">
+              <img src="images/icons/footer-line1-1.png" alt="">
+            </div>
+            <div class="container">
+                <div class="footer-top-wrapper wow fadeInUp" data-wow-delay=".2s">
+                  <a href="index-2.html" class="footer-logo">
+                    <img src="logo.png" alt="">
+                  </a>
+                  <div class="footer-info">
+                    <a class="mail" href="https://html.kodesolution.com/cdn-cgi/l/email-protection#27494242434f424b576744484a5746495e0944484a"><span class="__cf_email__" data-cfemail="432d2626272b262f3303202c2e33222d3a6d202c2e">royalvise7@gmail.com</span></a>
+                    <a class="phone" href="tel:+12345678900">8076795584</a>
+                  </div>
+                </div>
+                <div class="footer-widget-wrapper">
+                   <div class="row justify-content-between">
+                    <div class="col-xl-5 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                      <div class="footer-content">
+                        <h2 class="title">
+                          Let’s Talk
+                          <span class="d-xl-block">Work Together</span>
+                        </h2>
+                        <h3 class="title-2">
+                          Get the latest inspiration & insights
+                        </h3>
+                        <form method="post" action="#">
+                          <div class="form-group">
+                            <input type="email" name="email" class="email" placeholder="Enter your email" required="">
+                            <button type="button" class="circle-btn">
+                            <i class="fa-light fa-paper-plane"></i>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                   </div>
+                   <div class="col-xl-2 d-none d-xl-block">
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4ba6e745dea8ae8',t:'MTc5MjE4OTAyMw=='};var a=document.createElement('script');a.src='../../cdn-cgi/challenge-platform/h/b/scripts/jsd/d2d3316b729e/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"88f4fa328f314d4c95a104b4a60b2313","r":1,"spa":2}' crossorigin="anonymous"></script>
+                   </div>
+                   <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
+                      <div class="footer-widget-items mt-40">
+                          <div class="widget-head mb-20">
+                              <h4 class="widget-title">Quick Link</h4>
+                          </div>
+                          <ul class="user-links">
+                            <li><a href="about.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="page-team.html">Prototype</a></li>
+                            <li><a href="page-projects.html">Clients</a></li>
+                            <li><a href="page-contact.html">Careers</a></li>
+                            <li><a href="page-contact.html">Contact Us</a></li>
+                          </ul>
+                      </div>
+                   </div>
+                   <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".7s">
+                      <div class="footer-widget-items  mt-40">
+                          <div class="widget-head mb-20">
+                              <h4 class="widget-title">Our Solutions</h4>
+                          </div>
+                          <ul class="user-links">
+                            <li><a href="page-service-details.html">Web Designing</a></li>
+                            <li><a href="page-service-details.html">Digital Media</a></li>
+                            <li><a href="page-service-details.html">Promotions</a></li>
+                            <li><a href="page-service-details.html">Creative Solutions</a></li>
+                            <li><a href="page-service-details.html">Branding</a></li>
+                            <li><a href="page-service-details.html">Marketing</a></li>
+                          </ul>
+                      </div>
+                   </div>
+                   </div>
+                </div>
+                <div class="footer-bottom">
+                  <div class="footer-bottom-wrapper wow fadeInUp" data-wow-delay=".3s">
+                    <p>
+                    © Copyright 2026 by Royalvise
+                    </p>
+                      <div class="social-icon">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                        <a href="#"><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+        </footer>
+  
+      </div>
+    </div>  
+
+   </div>
+
+  <!-- End Page Wrapper -->
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fancybox.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/gsap.js"></script>
+  <script src="js/three.js"></script>
+  <script src="js/hover-effect.umd.js"></script>
+  <script src="js/gsap-scroll-to-plugin.js"></script>
+  <script src="js/gsap-scroll-smoother.js"></script>
+  <script src="js/gsap-scroll-trigger.js"></script>
+  <script src="js/gsap-split-text.js"></script>
+  <script src="js/split-type.min.js"></script>
+  <script src="js/parallaxie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/bxslider.js"></script>
+  <script src="js/nice-select.min.js"></script>
+  <script src="js/knob.js"></script>
+  <script src="js/appear.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/mixitup.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/script-gsap.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a4ba6e316cef8ae8',t:'MTc5MjE4OTAxMg=='};var a=document.createElement('script');a.src='../../cdn-cgi/challenge-platform/h/b/scripts/jsd/d2d3316b729e/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"88f4fa328f314d4c95a104b4a60b2313","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 
-<!-- Mirrored from https://html.kodesolution.com/2026/gencyo-html/page-project-details.html by HTTrack Website Copier/3.x [XR&CO], Fri, 16 Oct 2026 22:19:18 GMT -->
+
+<!-- Mirrored from https://html.kodesolution.com/2026/gencyo-html/ by HTTrack Website Copier/3.x [XR&CO], Fri, 16 Oct 2026 22:17:44 GMT -->
 </html>
